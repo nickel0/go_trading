@@ -1,0 +1,9 @@
+version: '3'
+services:
+#  sqlite3:
+#    image: "nouchka/sqlite3"
+  trading-app:
+    restart: 'always'
+    build: .
+    ports:
+      - '8080:8080'
