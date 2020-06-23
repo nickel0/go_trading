@@ -5,6 +5,9 @@ services:
 before_install:
   - docker build -t mune/docker-go-trading .
 
+script:
+  - docker run -e CI=true mune/docker-go-trading go test ./...
+
 #deploy:
 #  edge: true
 #  provider: elasticbeanstalk
