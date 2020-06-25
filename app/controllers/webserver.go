@@ -69,6 +69,7 @@ func apiCandleHandler(w http.ResponseWriter, r *http.Request) {
 
 	df, _ := models.GetAllCandle(productCode, durationTime, limit)
 
+
 	js, err := json.Marshal(df)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
